@@ -1,37 +1,74 @@
-body {
-  margin: 0;
+* { box-sizing: border-box; }
+
+body{
+  margin:0;
   font-family: Arial, sans-serif;
-  background: #0f0f0f;
-  color: white;
+  background:#0f0f0f;
+  color:white;
 }
 
-nav {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  padding: 20px;
-  background: #1a1a1a;
+/* Nav */
+nav{
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  padding:20px;
+  background:#1a1a1a;
 }
 
-nav a {
-  color: white;
-  text-decoration: none;
+nav a{
+  color:white;
+  text-decoration:none;
+  font-weight:600;
+  opacity:0.9;
 }
 
-.hero {
-  text-align: center;
-  padding: 80px 20px;
+nav a:hover{
+  opacity:1;
+  text-decoration:underline;
 }
 
-.highlights {
-  text-align: center;
-  padding: 40px 20px;
+/* Typography */
+h1{ margin:0 0 10px; font-size:48px; }
+h2{ margin:0 0 16px; font-size:28px; }
+p{ margin:8px 0; opacity:0.9; }
+
+/* Home */
+.hero{
+  text-align:center;
+  padding:80px 20px;
 }
 
-.card {
-  background: #1f1f1f;
-  padding: 20px;
-  margin: 15px auto;
-  width: 300px;
-  border-radius: 8px;
+.highlights{
+  text-align:center;
+  padding:40px 20px;
+}
+
+/* Shared card */
+.card{
+  background:#1f1f1f;
+  padding:20px;
+  margin:15px auto;
+  width:min(520px, 90%);
+  border-radius:12px;
+}
+
+/* Projects page */
+.page-header{
+  text-align:center;
+  padding:60px 20px 20px;
+}
+
+.project-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap:18px;
+  padding:20px;
+  width:min(1000px, 92%);
+  margin:0 auto 60px;
+}
+
+.project-grid .card{
+  width:100%;
+  margin:0;
 }
